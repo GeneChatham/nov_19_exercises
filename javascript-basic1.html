@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>Javascript Bare</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  // alert('Hello World!');
+
+  // var firstName = prompt("What is your first name?");
+  // var lastName = prompt("What's your last name?");
+  // alert("Nice to meet you, " + firstName + ' ' +lastName.toUpperCase());
+
+// upcase.toUpperCase());
+
+// var age = prompt("How old are you?"); {
+// 	if (age < 0 || age > 100)  {
+// 		alert("Sorry, can't come in here buddy!");
+// 	}
+// 	else if (age < 21 ) {
+// 		alert("Too young, go home and play with your toys!");
+// 	}
+// 	else {
+// 		alert('Welcome!');
+// 	}
+// }
+	
+var reserv1 = "Bob";
+var reserv2 = "Jan";
+var reserv3 = "Billy";
+
+var name = null
+var claimed1 = null
+var claimed2 = null
+var claimed3 = null
+
+while (true)  {
+	name = prompt("What is your reservation name?")
+	if (name === reserv1 && claimed1 === null) {
+		alert("Welcome to TK's Kitchen " + name);
+		claimed1 = 'claimed';
+	} else if (name === reserv2 && claimed2 === null) {
+		alert("Welcome to TK's Kitchen " + name);
+		claimed2 = 'claimed';
+	} else if (name === reserv3 && claimed3 === null) {
+		alert("Welcome to TK's Kitchen " + name);
+		claimed3 = 'claimed';
+	} else if (name === reserv1 && claimed1 === 'claimed') {
+		// This breaks out of the while loop
+		alert("This reservation has already been claimed.");
+		break;
+	} else if (name === reserv2 && claimed2 === 'claimed') {
+	// This breaks out of the while loop
+		alert("This reservation has already been claimed.");
+		break;
+	} else if (name === reserv3 && claimed3 === 'claimed') {
+	// This breaks out of the while loop
+		alert("This reservation has already been claimed.");
+		break;
+	else {
+		alert("You need to make a reservation");
+	}
+
+}
+
+
+ </script>
+
+</body>
+</html>

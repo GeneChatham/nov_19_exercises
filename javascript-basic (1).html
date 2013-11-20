@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>Javascript Bare</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  
+
+  // var number = prompt('Choose a number') 
+  // 	if (number%2 === 0) {
+  // 		alert('They are Even Steven');
+  // 		}
+  // 	else if (number%7 === 0) {
+  // 		alert("This is a lucky message!");
+  // 	}
+  // 	else {
+  // 		alert("Wrong number");
+  // 	}
+
+ //  var divideBy = function(x, y) {
+ //  		return x / y;
+ //  }
+
+ //    var result = divideBy(50, 2);
+	// console.log('Result should be 25:', result);
+
+	// result = divideBy(40, 10);
+	// console.log('Result should be 4:', result);
+
+	// result = divideBy(99, 3);
+	// console.log('Result should be 33:', result);
+
+var welcome = function(name1, name2) {
+	
+	if(name2 === undefined) {
+		return "Welcome, " + name1 + "!";	
+	}else {
+		return "Welcome, " + name1 + " and " + name2 + "!";
+	}
+}
+
+var result = welcome('Alice', 'Bob');
+console.log('Result should be "Welcome, Alice and Bob!"', result);
+
+var result = welcome('Alice');
+console.log('Result should be "Welcome, Alice!"', result);
+
+
+</script>
+
+</body>
+</html>

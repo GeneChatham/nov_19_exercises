@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title>Guess the Number!</title>
+</head>
+<body>
+
+<label>Pick a Number from 1-100:</label>
+<label id="response"></label>
+<br />
+<input id="user-input" type="text" />
+<input id="submit-button" type="button" value="Guess" />
+<input id="new-game" type="button" value="New Game" />
+<label id="games_won"></label>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+ 
+// var secretNumber = Math.floor((Math.random()*100)+1);
+// console.log(secretNumber);
+
+// var guessNumber = function(secretNumber, string) {
+// 	var userNumber = Number(prompt(string));
+// 	 if (userNumber === secretNumber) {
+// 	 	alert("You guessed the secret number!");
+// 	 } else if (userNumber > secretNumber) {
+// 	 	guessNumber(secretNumber, 'Guess a lower number');
+// 	 } else {
+// 	 	guessNumber(secretNumber, "Guess a higher number");
+// // 	 }
+// // }
+
+// guessNumber(secretNumber, "Choose a number between 1 and 100");
+
+
+var gamesWon = 0;
+
+var guessNumber = function() {
+	var secretNumber = Math.floor((Math.random()*100)+1);
+	console.log(secretNumber);
+	$('#submit-button').on('click', function (e) {
+		
+		var input = $('#user-input').val();
+		console.log(input);
+		
+		if (input === secretNumber.toString()) {
+			$('#response').text('You guessed the correct number!');
+			gamesWon += 1;
+			$('#games_won').text("You've won: " + gamesWon + " games");
+		}
+		else if (input > secretNumber.toString()) {
+			$('#response').text('Guess a lower number!');
+		}
+		else if (input < secretNumber.toString()) {
+			$('#response').text('Guess a higher number!');
+		}
+		else {
+			$('#response').text("You need to choose a number between 1-100")
+		}
+	});
+};
+
+guessNumber();
+
+$('#new-game').on('click', function (e) {
+	$('#user-input').val('');
+	$('#response').text('A new game has started!');
+
+	guessNumber();
+});
+
+
+// var sum = function(a) {
+// 	  return arguments[0];
+//     };
+
+// var s = sum(2, 2);
+// console.log('Result: ' + s);
+
+
+	// $('#response').text('Hi there!');
+
+	// $('#submit-button').on('click', function (e) {
+	// 	var input = $('#user-input').val();
+	// 	alert('You typed in: ' + input);
+	// });
+
+
+</script>
+
+</body>
+</html>
